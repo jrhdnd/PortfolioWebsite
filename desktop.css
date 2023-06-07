@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+:root{
+    --header-height: 3rem;
+    --font-semi: 600;
+}
+
+/* Colors Declaration */
+:root{
+   --first-color: #c27d24;
+   --second-color: #cf451a;
+   --third-color: #fff;
+   --fourth-color: rgb(0, 0, 0);
+   --fifth-color: #121212;
+}
+
+/* Fonts */
+:root{
+    --body-font: 'Ubuntu', sans-serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --big-font-size: 3.5rem;
+        --h2-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/* Margins */
+:root{
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    --mb-7: 3.5rem;
+    --mb-8: 8rem
+}
+
+/* Z-index */
+:root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100:
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.background-image{
+    background-image: url(dark\ bg\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--third-color);
+    background-color: var(--fifth-color);
+}
+
+h1,p, h2{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+img, video{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+}
+
+.image{
+    width: 350px;
+    height: 350px;
+}
+
+.area-title, .personalbg-title, .certificate-title{
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--second-color);
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+    z-index: var(--z-normal);
+}
+
+.area-title::after{
+    position: absolute;
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+
+.personalbg-title::after{
+    position: absolute;
+    width: 305px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3rem;
+    background-color: var(--first-color);
+}
+
+.section{
+    padding: 50px 0;
+}
+
+/* Layout */
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-index);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 1px 4px rgba(146,161,176,.25);
+}
+
+/* Nav */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--font-semi);
+}
+
+@media screen and (max-width: 768px){
+    .nav_bar{
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--third-color);
+        transition: .5s;
+    }
+    
+}
+
+.nav_item{
+    margin-bottom: var(--mb-4);
+}
+
+.nav_link{
+    position: relative;
+    color: var(--third-color)
+}
+
+.nav_link:hover{
+    position: relative;
+    color: var(--first-color);
+}
+
+.nav_logo{
+    color: var(--third-color);
+}
+
+/* Active Menu */
+.active:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+
+.show{
+    right: 0;
+}
+
+/* Home */
+.home{
+    height: calc(100vh - 3rem);
+    row-gap: 1rem;
+}
+
+.home_input{
+    align-self: center;
+}
+
+.home_title{
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-5);
+    color: var(--third-color);
+}
+
+.home_title-color{
+    color: var(--second-color);
+}
+
+.home_sm{
+    display: flex;
+    flex-direction: column;
+}
+
+.home_sm-icon{
+    width: max-content;
+    margin-bottom: var(--mb-2);
+    font-size: 1.5rem;
+    color: var(--third-color);
+}
+
+.home_sm-icon:hover{
+    color: var(--first-color);
+}
+
+.home_img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 295px;
+}
+
+/* About */
+.about_container{
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.about_input{
+    margin-bottom: var(--mb-2);
+    color: var(--second-color);
+}
+
+.about_img{
+    justify-self: center;
+}
+
+.about_img img{
+    width: 200px;
+    border-radius: .5rem;
+}
+
+/* Personal Background Images */
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.row img{
+    margin-top: 5px;
+    margin-left: 55px;
+    margin-right: 55px;
+    border-radius: 50%;
+}
+
+.school{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.school p{
+   margin-right: 50px;
+   margin-left: -18px;
+   font-size: medium;
+   text-align: center;
+}
+
+/* Skills */
+.skills_container, .goal_container{
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.skills_subtitle{
+    margin-bottom: var(--mb-2);
+}
+
+.skills_text{
+    margin-bottom: var(--mb-4);
+}
+
+.goal_text{
+    margin-bottom: var(--mb-4);
+}
+
+.skill_data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-semi);
+    padding: 5rem 1rem;
+    margin-bottom: var(--mb-4);
+    border-radius: 5rem;
+    box-shadow: 0 4px 25px rgba(216, 223, 226, 0.15) ;
+}
+
+.skill_icon{
+    font-size: 2rem;
+    margin-right: var(--mb-2);
+    color: var(--first-color);
+}
+
+.skill_name{
+    display: flex;
+    align-items: center;
+}
+
+.skill_bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--third-color);
+    height: .25rem;
+    border-radius: .5rem;
+    z-index: var(--z-back);
+}
+
+.skill_java{
+    width: 70%;
+    background-color: var(--first-color);
+}
+
+.skill_html{
+    width: 80%;
+    background-color: var(--first-color);
+}
+
+.skill_css{
+    width: 85%;
+    background-color: var(--first-color);
+}
+
+.skill_ux{
+    width: 70%;
+    background-color: var(--first-color);
+}
+
+.skill_percentage_js{
+    text-align: center;
+    padding-right: 15px;
+
+}
+
+.skill_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+/* Personal Background */
+.personalbg_list{
+    box-shadow: 0 4px 25px rgba(216, 223, 226, 0.15) ;
+    font-style: var(--body-font);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Cerficates/Rewards */
+.cert{
+    box-shadow: 0 5px 30px rgba(216, 223, 226, 0.15) ;
+    margin-right: 1rem;
+}
+
+.certificate_container{
+    display: flex;
+    justify-content: center;
+}
+
+.cert:last-child {
+    margin-right: 0;
+  }
+
+.cert img{
+    width: 400px; /* Adjust the width as needed */
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.cert_3 img{
+    width: 400px; /* Adjust the width as needed */
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.cert_4 img{
+    width: 400px; /* Adjust the width as needed */
+    height: 170px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.certificate-title::after{
+    position: absolute;
+    width: 280px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 3rem;
+    background-color: var(--first-color);
+}
+
+/* Project */
+.project_container{
+    row-gap: 2rem;
+}
+
+.project_img, .project_img_4{
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+
+.project_img img{
+    transition: 1s;
+    cursor: pointer;
+}
+
+.project_img_4 img{
+    transition: transform 2s;
+    cursor: pointer;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.project_img img:hover, .project_img_4:hover{
+    transform: scale(1.1);
+}
+
+/* Project Inputs */
+
+.project1_container{
+    height: 60%;
+}
+
+.project1 img{
+    padding-top: 20px ;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: 95%;
+}
+
+.project1 p{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.video_container video{
+    padding-top: 40px;
+}
+
+.video_container p{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.project3 img{
+    padding-top: 50px ;
+    display: block;
+    margin: 0 auto;
+}
+
+.project3 p{
+    text-align: center;
+    padding-top: 70px; 
+}
+
+.project4 img{
+    border-radius: 50px;
+    padding-top: 20px ;
+    padding-bottom: 30px;
+    display: block;
+    margin: 0 auto; 
+}
+
+.project4 p{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.project5 img{
+    border-radius: 50px;
+    padding-top: 20px ;
+    padding-bottom: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.project5 p{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .content {
+    padding-top: 100vh;
+  }
+
+@media screen and (min-width: 1024px){
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nav #nav-check, .nav .nav-btn{
+    display: none;
+}
+
+.btn {
+    display: block;
+    background-color: var(--first-color);
+    border: none;
+    color: white;
+    padding: .75rem 2.5rem;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: var(--font-semi);
+    border-radius: .5rem;
+    margin: 0 auto;
+  }
+
+
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+
+  @media (max-width: 768px) {
+    .background {
+      background-attachment: scroll;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .cert_3 img,
+    .cert_4 img {
+      height: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .certificate_container {
+      flex-direction: column;
+      align-items: center
+    }
+  
+    .cert {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    .cert_3{
+        padding-bottom: 15px;
+    }
+  }
+  
+
+
+
+
+
+
+
+

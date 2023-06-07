@@ -1,0 +1,80 @@
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+
+    .section{
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .area-title{
+        margin-bottom: var(--mb-6);
+    }
+
+    .area-title::after{
+        width: 80px;
+        top: 3rem;
+    }
+
+    .nav{
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .nav_list{
+        display: flex;
+        padding-top: 0;
+    }
+
+    .nav_item{
+        margin-left: var(--mb-6);
+        margin-bottom: 0;
+    }
+
+    .nav_link{
+        color: var(--third-color);
+    }
+
+    .home{
+        height: 100vh;
+    }
+
+    .home_input{
+        align-self: flex-end;
+    }
+
+    .home_sm{
+        padding-top: 0;
+        padding-bottom: 2.5rem;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+
+    .home_sm-icon{
+        margin-bottom: 0;
+        margin-right: var(--mb-4);
+    }
+
+    .home_img{
+        width: 457px;
+        bottom: 15%;
+        z-index: 2;
+    }
+
+    .about_container, .skills_container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        text-align: initial;
+    }
+
+    .about_img img{
+        width: 300px;
+    }
+
+    .project_container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    
+}
